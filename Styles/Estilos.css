@@ -1,0 +1,154 @@
+:root {
+    /* Paleta de verdes */
+    --color-primary: #2E8B57;     /* Sea Green */
+    --color-secondary: #3CB371;   /* Medium Sea Green */
+    --color-light: #90EE90;       /* Light Green */
+    --color-dark: #006400;        /* Dark Green */
+    --color-accent: #98FB98;      /* Pale Green */
+
+    /* Neutrales */
+    --color-white: #FFFFFF;
+    --color-black: #333333;
+    --color-gray: #F4F4F4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: var(--color-gray);
+    color: var(--color-black);
+}
+
+header {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 1rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+header menu li a {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header menu li a:hover {
+    color: var(--color-accent);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#inicio {
+    text-align: center;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+#servicios {
+    margin-top: 2rem;
+}
+
+.servicios-individuales, 
+.servicios-grupales {
+    background-color: var(--color-white);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+details {
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-light);
+    border-radius: 5px;
+}
+
+details summary {
+    background-color: var(--color-light);
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+details ul {
+    padding: 1rem;
+}
+
+#turnos, #contacto {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+fieldset {
+    border: 1px solid var(--color-secondary);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--color-secondary);
+    border-radius: 4px;
+}
+
+button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 0.75rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-dark);
+}
+
+footer {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    text-align: center;
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header menu {
+        margin-top: 1rem;
+    }
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spa Sentirse Bien - Servicios de bienestar y belleza">
+    <title>Spa Sentirse Bien - Dra. Ana Felicidad</title>
+    <link rel="stylesheet" href="Styles/Estilos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <figure>
+                <img src="logo-spa.jpg" alt="Logo Spa Sentirse Bien">
+                <figcaption>Spa Sentirse Bien</figcaption>
+            </figure>
+            <menu>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#turnos">Turnos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </menu>
+        </nav>
+    </header>
+
+    <main>
+        <article id="inicio">
+            <h1>Bienvenidos a Sentirse Bien</h1>
+            <p>Spa de la Dra. Ana Felicidad - Cuidado integral de tu bienestar</p>
+        </article>
+
+        <section id="servicios">
+            <h2>Nuestros Servicios</h2>
+            
+            <article class="servicios-individuales">
+                <h3>Servicios Individuales</h3>
+                
+                <details>
+                    <summary>Masajes</summary>
+                    <ul>
+                        <li>Anti-stress</li>
+                        <li>Descontracturantes</li>
+                        <li>Masajes con piedras calientes</li>
+                        <li>Circulatorios</li>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary>Belleza</summary>
+                    <ul>
+                        <li>Lifting de pestaña</li>
+                        <li>Depilación facial</li>
+                        <li>Belleza de manos y pies</li>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary>Tratamientos Faciales</summary>
+                    <ul>
+                        <li>Punta de Diamante: Microexfoliación</li>
+                        <li>Limpieza profunda + Hidratación</li>
+                        <li>Crio frecuencia facial</li>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary>Tratamientos Corporales</summary>
+                    <ul>
+                        <li>VelaSlim</li>
+                        <li>DermoHealth</li>
+                        <li>Criofrecuencia</li>
+                        <li>Ultracavitación</li>
+                    </ul>
+                </details>
+            </article>
+
+            <article class="servicios-grupales">
+                <h3>Servicios Grupales</h3>
+                <ul>
+                    <li>Hidromasajes</li>
+                    <li>Yoga</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="turnos">
+            <h2>Solicitar Turno</h2>
+            <form id="formulario-turno" autocomplete="on">
+                <fieldset>
+                    <legend>Datos Personales</legend>
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Detalles del Turno</legend>
+                    <label for="servicio">Servicio:</label>
+                    <select id="servicio" name="servicio" required>
+                        <option value="">Selecciona un servicio</option>
+                    </select>
+
+                    <label for="fecha">Fecha deseada:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </fieldset>
+
+                <button type="submit">Solicitar Turno</button>
+            </form>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <address>
+                <p>WhatsApp: [Número de WhatsApp]</p>
+                <p>Correo: [Correo electrónico del spa]</p>
+                <p>Dirección: [Dirección física del spa]</p>
+            </address>
+
+            <form id="formulario-contacto">
+                <fieldset>
+                    <legend>Envíanos un Mensaje</legend>
+                    <label for="nombre-contacto">Nombre:</label>
+                    <input type="text" id="nombre-contacto" required>
+
+                    <label for="email-contacto">Email:</label>
+                    <input type="email" id="email-contacto" required>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" required></textarea>
+                </fieldset>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <small>&copy; 2025 Spa Sentirse Bien - Todos los derechos reservados</small>
+        <p>Desarrollado por [Nombre del Equipo]</p>
+    </footer>
+
+    <script>
+        // Script para poblar el selector de servicios
+        document.addEventListener('DOMContentLoaded', function() {
+            const serviceSelect = document.getElementById('servicio');
+            
+            const services = [
+                // Servicios Individuales
+                'Masaje Anti-stress',
+                'Masaje Descontracturante',
+                'Masaje con Piedras Calientes',
+                'Masaje Circulatorio',
+                'Lifting de Pestaña',
+                'Depilación Facial',
+                'Belleza de Manos y Pies',
+                'Tratamiento Punta de Diamante',
+                'Limpieza Facial Profunda',
+                'Crio Frecuencia Facial',
+                'VelaSlim',
+                'DermoHealth',
+                'Criofrecuencia',
+                'Ultracavitación',
+                
+                // Servicios Grupales
+                'Hidromasaje',
+                'Yoga'
+            ];
+
+            services.forEach(service => {
+                const option = document.createElement('option');
+                option.value = service;
+                option.textContent = service;
+                serviceSelect.appendChild(option);
+            });
+        });
+    </script>
+</body>
+</html>
